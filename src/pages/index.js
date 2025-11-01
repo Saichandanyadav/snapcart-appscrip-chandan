@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection/HeroSection"
 import FilterSection from "../components/FilterSection/FilterSection"
 import Footer from "../components/Footer/Footer"
 import styles from "../styles/Home.module.css"
+import { generateJsonLd } from "../utils/seo"
 
 export default function Home({ products }) {
   const [favorites, setFavorites] = useState([])
@@ -12,13 +13,10 @@ export default function Home({ products }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const loadFavorites = () => {
-      const stored = localStorage.getItem("favorites")
-      if (stored) setFavorites(JSON.parse(stored))
-      setMounted(true)
-      setTimeout(() => setLoading(false), 1200)
-    }
-    loadFavorites()
+    const stored = localStorage.getItem("favorites")
+    if (stored) setFavorites(JSON.parse(stored))
+    setMounted(true)
+    setTimeout(() => setLoading(false), 1200)
   }, [])
 
   useEffect(() => {
@@ -27,11 +25,34 @@ export default function Home({ products }) {
 
   if (!mounted) return null
 
+  const siteUrl = "https://snapcart.vercel.app"
+  const jsonLd = generateJsonLd(products, siteUrl)
+
   return (
     <>
       <Head>
         <title>Snapcart - Product Listing</title>
+        <meta
+          name="description"
+          content="Shop top-quality products with Snapcart – discover, compare, and buy easily with our smart product listing experience."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Snapcart - Product Listing" />
+        <meta
+          property="og:description"
+          content="Discover and shop amazing products from Snapcart. Find the best deals online!"
+        />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${siteUrl}/snapcart-banner.png`} />
+        <link rel="canonical" href={siteUrl} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </Head>
+
       {loading ? (
         <>
           <Header favorites={favorites} />
@@ -49,7 +70,6 @@ export default function Home({ products }) {
           <Footer />
         </>
       )}
-      <Footer />
     </>
   )
 }
