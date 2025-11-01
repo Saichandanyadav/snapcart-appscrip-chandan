@@ -1,7 +1,19 @@
+Here’s your **updated `README.md`** file with your **live URL** and **GitHub repo** added properly 👇
+
+---
+
+```markdown
 # 🛍️ SnapCart
 
 SnapCart is a modern and responsive **shopping e-commerce web application** built with **Next.js** and **React**.  
 It provides a smooth online shopping experience with clean design, product browsing, favourites, and account management.
+
+---
+
+## 🌐 Live Demo
+
+🔗 **Website:** [https://snapcart-appscrip-chandan.vercel.app/](https://snapcart-appscrip-chandan.vercel.app/)  
+💻 **GitHub Repository:** [https://github.com/Saichandanyadav/snapcart-appscrip-chandan](https://github.com/Saichandanyadav/snapcart-appscrip-chandan)
 
 ---
 
@@ -64,8 +76,8 @@ snapcart/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/snapcart.git
-   cd snapcart
+   git clone https://github.com/Saichandanyadav/snapcart-appscrip-chandan.git
+   cd snapcart-appscrip-chandan
 ````
 
 2. **Install dependencies**
@@ -100,7 +112,7 @@ snapcart/
 
 ## 📸 Screenshots (Optional)
 
-You can add screenshots here later to showcase UI designs for:
+Add screenshots here to showcase:
 
 * Homepage
 * Favourites page
@@ -114,7 +126,7 @@ You can add screenshots here later to showcase UI designs for:
 **Name:** Sai Chandan
 **Role:** Full Stack Developer
 **LinkedIn:** [linkedin.com/in/saichandanyadav](https://www.linkedin.com/in/saichandanyadav/)
-**GitHub:** [github.com/your-username](https://github.com/your-username)
+**GitHub:** [github.com/Saichandanyadav](https://github.com/Saichandanyadav)
 
 ---
 
@@ -127,3 +139,9 @@ Feel free to use, modify, and share it with attribution.
 
 ### ✨ “Snap the best deals. Cart your favorites — only on SnapCart.”
 
+```
+
+---
+
+Would you like me to also make it **visually enhanced with emojis and shields (like badges for Next.js, Vercel, License, etc.)** for GitHub’s top section? It’ll make your README look more professional and eye-catching.
+```
