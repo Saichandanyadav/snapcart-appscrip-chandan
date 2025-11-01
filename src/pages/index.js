@@ -13,10 +13,16 @@ export default function Home({ products }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const stored = localStorage.getItem("favorites")
-    if (stored) setFavorites(JSON.parse(stored))
-    setMounted(true)
-    setTimeout(() => setLoading(false), 1200)
+    const timer = setTimeout(() => {
+      const stored = localStorage.getItem("favorites")
+      if (stored) {
+        const parsedFavorites = JSON.parse(stored)
+        setFavorites(parsedFavorites)
+      }
+      setMounted(true)
+      setLoading(false)
+    }, 100)
+    return () => clearTimeout(timer)
   }, [])
 
   useEffect(() => {
@@ -25,7 +31,7 @@ export default function Home({ products }) {
 
   if (!mounted) return null
 
-  const siteUrl = "https://snapcart.vercel.app"
+  const siteUrl = "https://snapcart-appscrip-chandan.vercel.app"
   const jsonLd = generateJsonLd(products, siteUrl)
 
   return (
