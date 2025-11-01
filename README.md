@@ -1,8 +1,3 @@
-Here’s your **updated `README.md`** file with your **live URL** and **GitHub repo** added properly 👇
-
----
-
-```markdown
 # 🛍️ SnapCart
 
 SnapCart is a modern and responsive **shopping e-commerce web application** built with **Next.js** and **React**.  
@@ -138,10 +133,3 @@ Feel free to use, modify, and share it with attribution.
 ---
 
 ### ✨ “Snap the best deals. Cart your favorites — only on SnapCart.”
-
-```
-
----
-
-Would you like me to also make it **visually enhanced with emojis and shields (like badges for Next.js, Vercel, License, etc.)** for GitHub’s top section? It’ll make your README look more professional and eye-catching.
-```
