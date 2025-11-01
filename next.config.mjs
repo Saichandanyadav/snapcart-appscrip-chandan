@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-};
+  reactStrictMode: true,
+  images: {
+    domains: [
+      "fakestoreapi.com",
+      "i.imgur.com",
+      "cdn-icons-png.flaticon.com"
+    ],
+  },
+}
 
-export default nextConfig;
+export default nextConfig

@@ -1,0 +1,136 @@
+.container {
+  padding: 60px;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section {
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.section h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: 600;
+}
+
+.section p {
+  color: #555;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.icon {
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #222;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+  margin: 180px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 50px;
+    gap: 35px;
+  }
+  .section {
+    padding: 45px;
+  }
+  .section h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 40px;
+    gap: 30px;
+  }
+  .section {
+    padding: 40px;
+  }
+  .section h2 {
+    font-size: 22px;
+  }
+  .icon {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 25px;
+    gap: 25px;
+  }
+  .section {
+    padding: 35px 25px;
+  }
+  .section h2 {
+    font-size: 20px;
+  }
+  .section p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .icon {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 25px 15px;
+    gap: 20px;
+  }
+  .section {
+    padding: 25px 20px;
+    border-radius: 10px;
+  }
+  .section h2 {
+    font-size: 18px;
+  }
+  .section p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .icon {
+    font-size: 32px;
+  }
+  .loader {
+    width: 55px;
+    height: 55px;
+    border-width: 5px;
+    margin: 150px auto;
+  }
+}
