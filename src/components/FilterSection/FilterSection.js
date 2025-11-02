@@ -107,12 +107,7 @@ export default function FilterSection({ products, favorites, setFavorites }) {
           />
         )}
         <div
-          className={styles.productGrid}
-          style={{
-            gridTemplateColumns: showFilter
-              ? "repeat(auto-fit, minmax(300px, 1fr))"
-              : "repeat(auto-fit, minmax(250px, 1fr))"
-          }}
+          className={`${styles.productGrid} ${showFilter ? styles.withFilter : styles.withoutFilter}`}
         >
           {loading ? (
             <div className={styles.loader}></div>
