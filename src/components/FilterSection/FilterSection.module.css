@@ -140,6 +140,14 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
+  .loader {
+    position: fixed;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    margin-top: 50px;
+    z-index: 999;
+  }
 }
 
 @media (max-width: 600px) {
@@ -151,6 +159,14 @@
   .productGrid.withFilter {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+  }
+  .loader {
+    position: fixed;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    margin-top: 50px;
+    z-index: 999;
   }
 }
 
